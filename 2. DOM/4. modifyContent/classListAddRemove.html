@@ -40,12 +40,22 @@
     <button id="toggleVisibilityButton">Toggle Visibility</button>
 
     <script>
+
+        globalThis.myGlobalVar = 'Hello, global!';
+        alert(myGlobalVar); // logs "Hello, global!"
+
+        window.anotherGlobalVar = 'Hello, global!';
+        alert(anotherGlobalVar); // logs "Hello, global!"
+
+        // global.anotherGlobalVar = 'Hello, global!';
+        // alert(anotherGlobalVar); // logs "Hello, global!"
+
         const htmlButton = document.getElementById('htmlButton');
         const textButton = document.getElementById('textButton');
         const toggleVisibilityButton = document.getElementById('toggleVisibilityButton');
         const output = document.getElementById('output');
 
-        // When the HTML button is clicked, insert HTML content
+        // When the HTML button is clicked, insert HTML conten–––––t
         htmlButton.addEventListener('click', function () {
             output.innerHTML = '<strong>Bold HTML content</strong> with some <em>italic</em>.';
         });
